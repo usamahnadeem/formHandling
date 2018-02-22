@@ -9,9 +9,9 @@
 
 <div class="navbar">
         <li><a href="#">Usamah</a></li>
-        <li><a href="#">Usamah</a></li>
-        <li><a href="#">Usamah</a></li>
-        <li><a href="#">Usamah</a></li>
+        <li><a href="#">Net Worth</a></li>
+        <li><a href="#">Resume</a></li>
+        <li><a href="#">Projects </a></li>
 </div>
       
 <body>
@@ -21,9 +21,9 @@
                  <h1> Sign Up </h1>
                 <!-- <a href="#" class="btn"> Enter Space </a>
     <!-- inside the form tag i can add an action that goes to like blah.php -->
-                <form> 
+                <form onsubmit="validateForm()"> 
                     <label for="fname">First Name</label>
-                    <input type="text" id="fname" name="firstname" placeholder="Your first name..">
+                    <input type="text" id="fname" name="firstname" placeholder="Your first name.." required>
                 
                     <label for="lname">Last Name</label>
                     <input type="text" id="lname" name="lastname" placeholder="Your last name..">
@@ -37,7 +37,7 @@
                       <option value="germany">Germany</option>
                     </select>
                   
-                    <input type="submit" value="Submit">
+                    <input type="Submit" value="Submit" onclick="validateForm()">
                   </form>
             </div>
         </div>
@@ -54,6 +54,20 @@ Corned beef tenderloin landjaeger jerky buffalo flank. Frankfurter hamburger bac
 </p>
 
         </div>
+
+<script>
+            console.log('hello');
+              function validateForm() {
+               var x = document.forms[0]["fname"].value;
+               var y = document.forms[0]["lname"].value;
+               var q = document.forms[0]["country"].value;
+               if (x.length  >= 10  || y.length >= 10 ) {
+                   alert( "Your name is pretty long")
+               }
+               console.log(x + y + q)
+           }
+           
+</script>
 
 </body>
 </html>

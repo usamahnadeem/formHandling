@@ -12,9 +12,12 @@ app.get('/style.css', function(req, res) {
    res.sendFile(__dirname + "/" + "style.css");
   });
 
-  app.get('/style.css', function(req, res) {
+  app.get('/hdefspace.png', function(req, res) {
     res.sendFile(__dirname + "/" + "hdefspace.png");
   });
+
+
+
 
 
 
